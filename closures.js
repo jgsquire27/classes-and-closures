@@ -23,12 +23,14 @@ function outer() {
 */
   
 // Code Here
+const inner = outer()
 
 
 
 //Once you do that, invoke inner.
 
 //Code Here
+inner()
 
 
 
@@ -52,6 +54,7 @@ function callFriend(name) {
 */
 
 //Code Here
+const callJake = callFriend('Jake', '435-555-9248')
 
 
 
@@ -62,15 +65,21 @@ function callFriend(name) {
 */
 
 //Code Here
+function makeCounter(){
+  let num = 0
+  return function(){
+    return num += 1
+  }
+}
 
 
 
 //Uncomment this once you make your function
-//   var count = makeCounter();
-//   count(); // 1
-//   count(); // 2
-//   count(); // 3
-//   count(); // 4
+  var count = makeCounter();
+  count(); // 1
+  count(); // 2
+  count(); // 3
+  count(); // 4
 
 
 
@@ -87,6 +96,10 @@ function callFriend(name) {
 
 function counterFactory(value) {
   // Code here.
+  let num1 = 0
+  return function inc(){
+    return num1 += 1
+  }
 
   return {
 
